@@ -1,0 +1,9 @@
+version: '2'
+
+# for build only
+services:
+  mm_serveronly:
+    build: 
+      context: ./
+    container_name: mm
+    image: bastilimbach/docker-magicmirror:latest
