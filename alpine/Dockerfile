@@ -20,7 +20,7 @@ RUN dos2unix docker-entrypoint.sh \
     && chmod +x docker-entrypoint.sh
     
 RUN cd /opt/magic_mirror/modules && \
-git clone https://github.com/kevinatown/MMM-Screencast.git . \
+git clone https://github.com/kevinatown/MMM-Screencast.git . &&\
 npm install --unsafe-perm
 
 EXPOSE $MM_PORT
