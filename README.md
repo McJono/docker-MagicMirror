@@ -21,8 +21,8 @@ In some cases, you want to start the application without an actual app window. I
 After a successful [Docker installation](https://docs.docker.com/engine/installation/) you just need to execute the following command in the shell:
 
 ```bash
-docker run  -d \
-			--publish 80:8080 \
+docker run -d \
+			--publish 8080:8080 \
 			--restart always \
 			--volume ~/.docker/magic_mirror/config:/opt/magic_mirror/config \
 			--volume ~/.docker/magic_mirror/modules:/opt/magic_mirror/modules \
