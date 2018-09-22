@@ -19,9 +19,8 @@ COPY docker-entrypoint.sh /opt/magic_mirror
 RUN dos2unix docker-entrypoint.sh \
     && chmod +x docker-entrypoint.sh
     
-RUN cd /opt/magic_mirror/modules && \
-git clone https://github.com/kevinatown/MMM-Screencast.git . &&\
-npm install --unsafe-perm
+RUN git clone https://github.com/kevinatown/MMM-Screencast.git /opt/magic_mirror/modules/
+RUN npm install --unsafe-perm /opt/magic_mirror/modules/MMM-Screencast/
 
 EXPOSE $MM_PORT
 CMD ["node serveronly"]
